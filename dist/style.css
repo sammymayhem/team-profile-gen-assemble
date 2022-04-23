@@ -1,8 +1,23 @@
+:root {
+    --header-bg: #6e0e0a;
+    --header-text: #f2bb05;
+    --body-bg: #124e78;
+}
+
 body {
-    background-color: #124e78;
+    background-color: var(--body-bg);
 }
 
 .jumbotron {
-    background-color: #6e0e0a;
-    color: #f2bb05;
+    background-color: var(--header-bg);
+    color: var(--header-text);
+}
+
+.card {
+    box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
+}
+
+.card-body {
+    background-color: var(--header-bg);
+    color: var(--header-text);
 }
