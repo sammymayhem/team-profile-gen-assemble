@@ -28,7 +28,7 @@ function teamHTML() {
             <div class="row">
                 <div class="col-sm">
                     <div class="card" style="width: 18rem;">
-                      // employee info here
+                      ${teamCards}; 
                     </div>
                 </div>
             </div>
