@@ -41,3 +41,20 @@ function teamHTML() {
 </html>
     `
 };
+
+function teamCards(dreamTeam) {
+    function teamManager(manager) {
+        return `
+        <div class="card-body">
+            <h3 class="card-title" id="emp-name">${manager.name}</h3>
+            <h4 class="card-text">${manager.role}</h4>
+        </div>
+            <ul class="list-group list-group-flush">
+            <li class="list-group-item" id="emp-id">ID: ${manager.id}</li>
+            <li class="list-group-item" id="emp-email">Email: ${manager.email}</li>
+            <li class="list-group-item" id="emp-extra">Office Number: ${manager.officeNumber}</li>
+        </ul>
+        `;
+    };
+    
+};
