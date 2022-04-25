@@ -1,4 +1,4 @@
-function teamHTML() {
+function teamHTML(dreamTeam) {
     return `
 <!DOCTYPE html>
 <html lang="en">
@@ -28,7 +28,7 @@ function teamHTML() {
             <div class="row">
                 <div class="col-sm">
                     <div class="card" style="width: 18rem;">
-                      ${teamCards}; 
+                      ${teamCards(dreamTeam)}; 
                     </div>
                 </div>
             </div>
@@ -46,15 +46,43 @@ function teamCards(dreamTeam) {
     function teamManager(manager) {
         return `
         <div class="card-body">
-            <h3 class="card-title" id="emp-name">${manager.name}</h3>
-            <h4 class="card-text">${manager.role}</h4>
+            <h3 class="card-title" id="emp-name">${manager.getName()}</h3>
+            <h4 class="card-text">${manager.getRole()}</h4>
         </div>
             <ul class="list-group list-group-flush">
-            <li class="list-group-item" id="emp-id">ID: ${manager.id}</li>
-            <li class="list-group-item" id="emp-email">Email: ${manager.email}</li>
-            <li class="list-group-item" id="emp-extra">Office Number: ${manager.officeNumber}</li>
+            <li class="list-group-item" id="emp-id">ID: ${manager.getId()}</li>
+            <li class="list-group-item" id="emp-email">Email: <a href="mailto: ${manager.getEmail()}">${manager.getEmail()}</a></li>
+            <li class="list-group-item" id="emp-extra">Office Number: <a href="tel: ${manager.getOfficeNumber()}">${manager.getOfficeNumber()}</a></li>
+        </ul>
+        `;
+    };
+    function teamEngineer(engineer) {
+        return `
+        <div class="card-body">
+            <h3 class="card-title" id="emp-name">${engineer.getName()}</h3>
+            <h4 class="card-text">${engineer.getRole()}</h4>
+        </div>
+            <ul class="list-group list-group-flush">
+            <li class="list-group-item" id="emp-id">ID: ${engineer.getId()}</li>
+            <li class="list-group-item" id="emp-email">Email: <a href="mailto: ${engineer.getEmail()}">${engineer.getEmail()}</a></li>
+            <li class="list-group-item" id="emp-extra">GitHub: <a href="http://www.github.com/${engineer.getGitHub()}">${engineer.getGitHub()}</a></li>
+        </ul>
+        `;
+    };
+    function teamIntern(intern) {
+        return `
+        <div class="card-body">
+            <h3 class="card-title" id="emp-name">${intern.getName()}</h3>
+            <h4 class="card-text">${intern.getRole()}</h4>
+        </div>
+            <ul class="list-group list-group-flush">
+            <li class="list-group-item" id="emp-id">ID: ${intern.getId()}</li>
+            <li class="list-group-item" id="emp-email">Email: ${intern.getEmail()}</li>
+            <li class="list-group-item" id="emp-extra">School: ${intern.getSchool()}</li>
         </ul>
         `;
     };
     
 };
+
+module.exports = teamHTML;
