@@ -106,7 +106,6 @@ function teamCards(dreamTeam) {
         .join("")
     );
     return html.join("");
-
 }
 
 module.exports = teamHTML;
