@@ -31,7 +31,7 @@ function makeTeam() {
             },
             {
                 type: 'input',
-                name: 'managersOfficeNumber',
+                name: 'managerOfficeNumber',
                 message: "What is the Captain's office number?"
             },
         ])
@@ -136,7 +136,7 @@ function makeTeam() {
                         answers.intName,
                         answers.intId,
                         answers.intEmail,
-                        answers.intGithub,
+                        answers.intSchool,
                     );
                     dreamTeam.push(intern);
                     nextEmp();
